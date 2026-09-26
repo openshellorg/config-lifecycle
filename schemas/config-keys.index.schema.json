@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openshellorg.github.io/schemas/config-keys.index.schema.json",
+  "title": "Config Key Sanitation index",
+  "type": "object",
+  "required": ["keys"],
+  "properties": {
+    "tool": { "type": "string", "description": "Tool or product this catalog describes" },
+    "catalogVersion": { "type": "integer", "minimum": 1 },
+    "keys": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "status"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "status": {
+            "type": "string",
+            "enum": ["active", "deprecated", "expired"]
+          },
+          "since": { "type": "string" },
+          "expiredAfter": { "type": "string" },
+          "successor": { "type": "string" },
+          "rationale": { "type": "string" },
+          "message": { "type": "string" },
+          "aliases": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": { "status": { "const": "expired" } },
+              "required": ["status"]
+            },
+            "then": { "required": ["expiredAfter"] }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+= Changelog
+
+== 0.1.0 (2026-09-26)
+
+* Initial library: JSON key catalogs, `.npmrc`-style key=value scan, classify → findings → human alerts.
+* Demo binary `cks-demo` scans a fixture catalog against sample config lines.
+* Schema stub for `config-keys.index` interchange.

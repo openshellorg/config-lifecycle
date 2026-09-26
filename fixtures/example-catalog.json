@@ -1,0 +1,35 @@
+{
+  "tool": "npm",
+  "catalogVersion": 1,
+  "keys": [
+    {
+      "name": "registry",
+      "status": "active",
+      "since": "1.0.0",
+      "rationale": "https://docs.npmjs.com/cli/v10/using-npm/config#registry"
+    },
+    {
+      "name": "legacy-peer-deps",
+      "status": "deprecated",
+      "since": "7.0.0",
+      "successor": "follow peer dependency resolver defaults; remove when unused",
+      "rationale": "https://docs.npmjs.com/cli/v10/using-npm/config#legacy-peer-deps",
+      "message": "deprecated key legacy-peer-deps — prefer resolving peers without this override when possible"
+    },
+    {
+      "name": "shrinkwrap",
+      "status": "expired",
+      "since": "5.0.0",
+      "expiredAfter": "npm@5.0.0",
+      "successor": "use package-lock.json",
+      "rationale": "https://docs.npmjs.com/cli/v8/configuring-npm/package-lock-json",
+      "message": "expired key shrinkwrap (expired after npm@5); value ignored; use package-lock.json"
+    },
+    {
+      "name": "fund",
+      "status": "active",
+      "since": "7.0.0",
+      "rationale": "https://docs.npmjs.com/cli/v10/using-npm/config#fund"
+    }
+  ]
+}
