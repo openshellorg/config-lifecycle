@@ -7,32 +7,32 @@ ifdef::env-github[]
 ++++
 <a id="readme-top"></a>
 <div align="center">
-<a href="https://github.com/openshellorg/config-key-sanitation/graphs/contributors"><img src="https://img.shields.io/github/contributors/openshellorg/config-key-sanitation.svg?style=for-the-badge" alt="Contributors"></a>
-<a href="https://github.com/openshellorg/config-key-sanitation/network/members"><img src="https://img.shields.io/github/forks/openshellorg/config-key-sanitation.svg?style=for-the-badge" alt="Forks"></a>
-<a href="https://github.com/openshellorg/config-key-sanitation/stargazers"><img src="https://img.shields.io/github/stars/openshellorg/config-key-sanitation.svg?style=for-the-badge" alt="Stars"></a>
-<a href="https://github.com/openshellorg/config-key-sanitation/issues"><img src="https://img.shields.io/github/issues/openshellorg/config-key-sanitation.svg?style=for-the-badge" alt="Issues"></a>
-<a href="https://github.com/openshellorg/config-key-sanitation/blob/main/LICENSE"><img src="https://img.shields.io/github/license/openshellorg/config-key-sanitation.svg?style=for-the-badge" alt="License"></a>
+<a href="https://github.com/openshellorg/config-lifecycle/graphs/contributors"><img src="https://img.shields.io/github/contributors/openshellorg/config-lifecycle.svg?style=for-the-badge" alt="Contributors"></a>
+<a href="https://github.com/openshellorg/config-lifecycle/network/members"><img src="https://img.shields.io/github/forks/openshellorg/config-lifecycle.svg?style=for-the-badge" alt="Forks"></a>
+<a href="https://github.com/openshellorg/config-lifecycle/stargazers"><img src="https://img.shields.io/github/stars/openshellorg/config-lifecycle.svg?style=for-the-badge" alt="Stars"></a>
+<a href="https://github.com/openshellorg/config-lifecycle/issues"><img src="https://img.shields.io/github/issues/openshellorg/config-lifecycle.svg?style=for-the-badge" alt="Issues"></a>
+<a href="https://github.com/openshellorg/config-lifecycle/blob/main/LICENSE"><img src="https://img.shields.io/github/license/openshellorg/config-lifecycle.svg?style=for-the-badge" alt="License"></a>
 <br />
-<h3 align="center">config-key-sanitation</h3>
+<h3 align="center">config-lifecycle</h3>
 <p align="center">
 Classify, match, and alert on CLI config keys — active, deprecated, expired, unknown.<br />
 Never drop detection of outdated keys.<br />
-<a href="https://docs.opensh.org/open-shell-org/standard-config-key-sanitation.html"><strong>Explore the docs »</strong></a><br /><br />
-<a href="https://github.com/openshellorg/config-key-sanitation/issues">Report Bug</a>
+<a href="https://docs.opensh.org/open-shell-org/standard-config-lifecycle-management.html"><strong>Explore the docs »</strong></a><br /><br />
+<a href="https://github.com/openshellorg/config-lifecycle/issues">Report Bug</a>
 &middot;
-<a href="https://github.com/openshellorg/config-key-sanitation/issues">Request Feature</a>
+<a href="https://github.com/openshellorg/config-lifecycle/issues">Request Feature</a>
 </p>
 </div>
 ++++
 endif::[]
 
 ifndef::env-github[]
-= config-key-sanitation
+= config-lifecycle
 
 Classify, match, and alert on CLI config keys — active, deprecated, expired, unknown.
 Never drop detection of outdated keys.
 
-link:https://docs.opensh.org/open-shell-org/standard-config-key-sanitation.html[Explore the docs »]
+link:https://docs.opensh.org/open-shell-org/standard-config-lifecycle-management.html[Explore the docs »]
 endif::[]
 
 == About The Project
@@ -42,12 +42,14 @@ This library loads a machine-readable key catalog, scans key=value config text, 
 
 Expired keys stay in the catalog forever and still produce alerts — they are not forgotten.
 
+Formerly named `config-key-sanitation`; the old repository URL redirects here.
+
 === Built With
 
 * Runtime / language
 ** link:https://dlang.org[D] (Phobos `std.json`)
 * Docs / standard
-** link:https://docs.opensh.org/open-shell-org/standard-config-key-sanitation.html[OpenShellOrg Config Key Sanitation]
+** link:https://docs.opensh.org/open-shell-org/standard-config-lifecycle-management.html[OpenShellOrg Config Lifecycle Management]
 * Packaging
 ** link:https://code.dlang.org[DUB]
 
@@ -63,14 +65,14 @@ Prefer the registry once published:
 
 [source,bash]
 ----
-dub add config-key-sanitation
+dub add config-lifecycle
 ----
 
 Until the first DUB release, use a path dependency on a sibling clone:
 
 [source,sdl]
 ----
-dependency "config-key-sanitation" path="../config-key-sanitation"
+dependency "config-lifecycle" path="../config-lifecycle"
 ----
 
 === Demo
@@ -84,7 +86,7 @@ dub run --config=demo -- fixtures/sample.npmrc
 
 [source,d]
 ----
-import config_key_sanitation;
+import config_lifecycle;
 import std.file : readText;
 
 auto catalog = Catalog.loadJson(readText("fixtures/example-catalog.json"));

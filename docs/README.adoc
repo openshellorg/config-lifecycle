@@ -1,4 +1,4 @@
-= config-key-sanitation notes
+= config-lifecycle notes
 
 Library-only package docs live in the README and OpenShellOrg SOS protocol page.
 This folder holds package-local notes for contributors.

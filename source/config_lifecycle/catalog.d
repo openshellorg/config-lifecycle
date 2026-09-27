@@ -1,9 +1,9 @@
-module config_key_sanitation.catalog;
+module config_lifecycle.catalog;
 
 import std.algorithm : canFind;
 import std.exception : enforce;
 import std.json;
-import config_key_sanitation.types;
+import config_lifecycle.types;
 
 /// In-memory key catalog loaded from a JSON index.
 struct Catalog {
@@ -13,7 +13,7 @@ struct Catalog {
 
     private KeyRecord[string] byName;
 
-    /// Load a Config Key Sanitation JSON catalog.
+    /// Load a Config Lifecycle Management JSON catalog.
     static Catalog loadJson(string jsonText) {
         auto root = parseJSON(jsonText);
         Catalog c;

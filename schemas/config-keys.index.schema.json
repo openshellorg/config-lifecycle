@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://openshellorg.github.io/schemas/config-keys.index.schema.json",
-  "title": "Config Key Sanitation index",
+  "title": "Config Lifecycle Management index",
   "type": "object",
   "required": ["keys"],
   "properties": {

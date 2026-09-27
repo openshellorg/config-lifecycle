@@ -1,9 +1,9 @@
-module config_key_sanitation.scan;
+module config_lifecycle.scan;
 
 import std.algorithm : startsWith;
 import std.array : split;
 import std.string : indexOf, strip, stripLeft;
-import config_key_sanitation.types;
+import config_lifecycle.types;
 
 /**
  * Parse npmrc / ini-like key=value lines.

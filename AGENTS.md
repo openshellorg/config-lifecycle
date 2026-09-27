@@ -1,9 +1,9 @@
-# config-key-sanitation
+# config-lifecycle
 
-D library implementing OpenShellOrg **Config Key Sanitation**: never stop detecting expired config keys.
+D library implementing OpenShellOrg **Config Lifecycle Management**: never stop detecting expired config keys.
 
-- Spec: https://docs.opensh.org/open-shell-org/standard-config-key-sanitation.html
-- Registry: DUB (`config-key-sanitation`) — publish when ready; local path OK for co-dev
+- Spec: https://docs.opensh.org/open-shell-org/standard-config-lifecycle-management.html
+- Registry: DUB (`config-lifecycle`) — publish when ready; local path OK for co-dev
 
 ## Agents
 

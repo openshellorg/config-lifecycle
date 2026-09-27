@@ -1,4 +1,4 @@
-module config_key_sanitation.types;
+module config_lifecycle.types;
 
 /// Lifecycle status for a catalogued (or unknown) config key.
 enum KeyStatus {

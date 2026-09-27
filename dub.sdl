@@ -1,13 +1,13 @@
-name "config-key-sanitation"
+name "config-lifecycle"
 description "Classify, match, and alert on CLI config keys — active, deprecated, expired, unknown (never drop detection)"
 version "0.1.0"
 authors "OpenShellOrg"
 copyright "Copyright © 2026, OpenShellOrg"
-homepage "https://github.com/openshellorg/config-key-sanitation"
+homepage "https://github.com/openshellorg/config-lifecycle"
 license "MIT"
 
 targetType "library"
-targetName "config-key-sanitation"
+targetName "config-lifecycle"
 
 configuration "library" {
 	targetType "library"
@@ -16,7 +16,7 @@ configuration "library" {
 
 configuration "demo" {
 	targetType "executable"
-	targetName "cks-demo"
+	targetName "config-lifecycle-demo"
 	mainSourceFile "source/demo/app.d"
 	stringImportPaths "fixtures"
 }

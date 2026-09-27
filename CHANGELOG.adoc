@@ -1,7 +1,12 @@
 = Changelog
 
+== Unreleased
+
+* Renamed from `config-key-sanitation` to `config-lifecycle`. The D module is now `config_lifecycle` (was `config_key_sanitation`), the demo binary is `config-lifecycle-demo` (was `cks-demo`), and alert lines start with `config-lifecycle:`.
+The protocol it implements is now called Config Lifecycle Management (was Config Key Sanitation). The old GitHub URL redirects here.
+
 == 0.1.0 (2026-09-26)
 
 * Initial library: JSON key catalogs, `.npmrc`-style key=value scan, classify → findings → human alerts.
-* Demo binary `cks-demo` scans a fixture catalog against sample config lines.
+* Demo binary `config-lifecycle-demo` scans a fixture catalog against sample config lines.
 * Schema stub for `config-keys.index` interchange.

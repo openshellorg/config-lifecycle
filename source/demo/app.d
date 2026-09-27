@@ -3,7 +3,7 @@ module demo;
 import std.file : exists, readText;
 import std.path : buildPath;
 import std.stdio;
-import config_key_sanitation;
+import config_lifecycle;
 
 void main(string[] args) {
     string catalogPath = "fixtures/example-catalog.json";
