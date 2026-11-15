@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-11-15
+
+* The README contents list now sits under the header inside the expander.
+
 == Unreleased
 
 * Renamed from `config-key-sanitation` to `config-lifecycle`. The D module is now `config_lifecycle` (was `config_key_sanitation`), the demo binary is `config-lifecycle-demo` (was `cks-demo`), and alert lines start with `config-lifecycle:`.
